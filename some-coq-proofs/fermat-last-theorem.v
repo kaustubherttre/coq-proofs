@@ -123,7 +123,7 @@ admit.
 Admitted.
 
 (*Adding every component together*)
-Theorem theorem_1 : forall n, (exists x y z, x^n + y^n = z^n) -> (exists a b c, a^n + b^n = c^n /\ (coprime a b)).
+Theorem Th1 : forall n, (exists x y z, x^n + y^n = z^n) -> (exists a b c, a^n + b^n = c^n /\ (coprime a b)).
 Proof.
   intros n [x [y [z H]]].
   pose (d := gcdn x y).
@@ -141,15 +141,15 @@ Admitted.
 (*Proof for these is quite straight forward so not doing this a good resource to understand these is https://www.math.uci.edu/~brusso/vanderPoortenpp1-6.pdf
 
 *)
-Theorem theorem_2 : forall a b c, a^4 + b^4 <> c^4.
+Theorem Th2 : forall a b c, a^4 + b^4 <> c^4.
 Proof.
 Admitted.
 
-Theorem theorem_3 : forall a b c, a^3 + b^3 <> c^3.
+Theorem Th3 : forall a b c, a^3 + b^3 <> c^3.
 Proof.
 Admitted.
 
-Theorem theorem_4 : (exists a b c n, n > 4 /\ a^n + b^n = c^n) ->
+Theorem Th3 : (exists a b c n, n > 4 /\ a^n + b^n = c^n) ->
                                     (exists a b c n, n > 4 /\ prime n /\ a^n + b^n = c^n).
 Proof.
   simpl.
@@ -162,6 +162,14 @@ Proof.
   red.
   
   intros [a [b [c [n [eq ngt]]]]].
+  assert (nn4 : n <> 4). {
+    specialize (Th2 a b c).
+    red; intros; rewrite H0 in eq; rewrite eq in H; contradiction.
+  }
+  assert (nn3 : n <> 3). {
+    specialize (Th3 a b c).
+    red; intros; rewrite H0 in eq; rewrite eq in H; contradiction.
+  }
 
   assert (ngt4 : n > 4). {
     rewrite ltn_neqAle ltn_neqAle.
@@ -176,7 +184,7 @@ Proof.
   }
   clear ngt nn4 nn3.
 
-  specialize (theorem_4).
+  specialize (Th4).
   intros.
   destruct H.
   exists a, b, c, n.
@@ -185,7 +193,7 @@ Proof.
   rename x into a.
   destruct H as [b [c [n [ngt [pn eq]]]]].
 
-  specialize (theorem_1 n).
+  specialize (Th1 n).
   intros.
   destruct H.
   exists a,b,c.
