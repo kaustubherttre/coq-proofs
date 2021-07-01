@@ -19,5 +19,5 @@ these are the following proofs:
 
 <hr>
 
-https://github.com/coq-contribs/fermat4/blob/master/Fermat4.v This proves for n=4
+ Proof for n=4 <a href = "https://github.com/coq-contribs/fermat4/blob/master/Fermat4.v"> Link </a> 
 </sub>
