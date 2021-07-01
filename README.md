@@ -15,5 +15,5 @@ these are the following proofs:
 
 
 
-<sub>*This has a lot of bugs in it, and quite frankly is incomplete with Proof given as a through proving 4/7 theorems without explicitly proving TH2, TH3 and TH4 as they are more theoretical. The other three theorems have something to do with Ellipical Functions which are too complex to comprehend so this is a very incomplete proof but a very nice starting point if someone wants to disprove Euler's Conjecture, (will add this proof if time permits) Proof for n=4 <a href = "https://github.com/coq-contribs/fermat4/blob/master/Fermat4.v"> Link </a> 
+<sub>*This has a lot of bugs(assumptions) in it, and quite frankly is incomplete with Proof given as a through proving 4/7 theorems without explicitly proving TH2, TH3 and TH4 as they are more theoretical. The other three theorems have something to do with Ellipical Functions which are too complex to comprehend so this is a very incomplete proof but a very nice starting point if someone wants to disprove Euler's Conjecture, (will add this proof if time permits) Proof for n=4 <a href = "https://github.com/coq-contribs/fermat4/blob/master/Fermat4.v"> Link </a> 
 </sub>
