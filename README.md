@@ -5,7 +5,7 @@ these are the following proofs:
 
 1. Basic Predicate Calculus Properties
 2. Peirce's Lemma
-3. Gauss Theorem
+3. Gauss's Theorem
 4. Euclid's First Theorem
 5. Fermat's Last Theorem*
 
